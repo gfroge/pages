@@ -139,22 +139,13 @@ function workWithDom(finalData) {
             </li>`;
 
             const dataSubList = document.querySelector('#data-sublist');
-            const obj = objListGetter(toShow);
-            console.log(obj)
-            for(let i=0; i<obj.length; i++){
+            objListGetter(toShow).forEach(element => {
                 dataSubList.innerHTML += `
                 <li>
-                ${obj}
+                    ${element[0]} (${element[1]})
                 </li>
                 `;
-            }
-            // objListGetter(toShow).forEach(element => {
-            //     dataSubList.innerHTML += `
-            //     <li>
-            //         ${element[0]} (${element[1]})
-            //     </li>
-            //     `;
-            // });
+            });
 
             toShow.forEach(opt => {
                 dataList.innerHTML += `
