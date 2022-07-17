@@ -140,10 +140,11 @@ function workWithDom(finalData) {
 
             const dataSubList = document.querySelector('#data-sublist');
             const obj = objListGetter(toShow);
+            console.log(obj)
             for(let i=0; i<obj.length; i++){
                 dataSubList.innerHTML += `
                 <li>
-                    ${obj[i][0]} (${obj[i][1]})
+                ${obj}
                 </li>
                 `;
             }
