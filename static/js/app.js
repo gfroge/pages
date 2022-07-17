@@ -227,7 +227,7 @@ function workWithDom(finalData) {
         }
 
         return sortedParents.sort(function (a, b) {
-            return a[1] < b[1]
+            return Number(a[1] < b[1]);
         })
     }
 }
